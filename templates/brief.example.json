@@ -1,0 +1,100 @@
+{
+  "step0": {
+    "feel": "Q1 What's the one thing this video has to make someone feel?",
+    "subject": "Q2 What's the subject or product, in a sentence?",
+    "prop": "Q3 Do you have a prop idea, or should I invent one that fits? (invented props default to 3D)",
+    "before_after": "Q4 Is there a before-and-after or transformation angle?",
+    "specific_effect": "Q5 Any specific effect you want, like the floating stat or typed-out words? (the ONLY place a copied effect is allowed; else 'none')",
+    "answered_by": "Karan, <date>"
+  },
+  "business": "business",
+  "music": {
+    "file": "audio/music.wav",
+    "beats": "audio/beats.json",
+    "source": "Meta Sound Collection track (licence row in audio/LICENCES.csv, paid_ads_allowed=meta-only)"
+  },
+  "segments": [
+    {
+      "clip": "ingest/PRESENTER.mov",
+      "kind": "presenter",
+      "in": 0.5,
+      "bars": 1,
+      "crop": {
+        "y": 0
+      },
+      "push_in": 0.03,
+      "push_origin": [
+        0.5,
+        0.3
+      ],
+      "label": "presenter opener, skip the near-frozen first 0.5 s"
+    },
+    {
+      "clip": "ingest/CLIP.mov",
+      "in": 0.0,
+      "bars": 1,
+      "crop": {
+        "y": 0
+      },
+      "label": "what is in this shot"
+    },
+    {
+      "clip": "ingest/CLIP.mov",
+      "in": 4.0,
+      "bars": 1,
+      "crop": {
+        "y": 0
+      },
+      "label": "what is in this shot"
+    }
+  ],
+  "hooks": [
+    {
+      "id": "A",
+      "text": "Hook line one, under ten words.",
+      "highlight": "word"
+    }
+  ],
+  "lines": [
+    {
+      "segment": 1,
+      "text": "One short line per segment.",
+      "highlight": "line"
+    }
+  ],
+  "overlays": [
+    {
+      "type": "dish_label",
+      "segment": 1,
+      "text": "Dish name"
+    },
+    {
+      "type": "offer_card",
+      "segment": 2,
+      "text": "Your first month is on us",
+      "sub": "For independent restaurants and cafes"
+    }
+  ],
+  "end_card": {
+    "bars": 2,
+    "headline": "Book your free month",
+    "url": "domin8temedia.com/marketing/free-month",
+    "link": "https://domin8temedia.com/marketing/free-month/",
+    "xfade_frames": 12
+  },
+  "grain": {
+    "file": "grain.png",
+    "opacity": 0.045,
+    "seed": 1234,
+    "scale": 1
+  },
+  "opener": {
+    "note": "segment 0 must be a MOVING presenter clip (kind presenter). Only set waiver if Karan says no presenter for this ad.",
+    "waiver": ""
+  },
+  "private_names": [
+    "Client Business Name",
+    "City",
+    "Owner first name"
+  ]
+}
